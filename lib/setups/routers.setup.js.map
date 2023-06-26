@@ -1,0 +1,1 @@
+{"version":3,"file":"routers.setup.js","sourceRoot":"","sources":["../../src/setups/routers.setup.ts"],"names":[],"mappings":";;;;;AACA,kHAAwF;AAExF,uFAA8D;AAE9D,SAAwB,YAAY,CAClC,iBAAoC,EACpC,yBAAoD;IAKpD,MAAM,aAAa,GAAG,IAAI,wBAAa,CAAC,iBAAiB,CAAC,CAAC;IAC3D,MAAM,qBAAqB,GAAG,IAAI,iCAAqB,CACrD,yBAAyB,CAC1B,CAAC;IAEF,OAAO;QACL,aAAa;QACb,qBAAqB;KACtB,CAAC;AACJ,CAAC;AAhBD,+BAgBC"}
