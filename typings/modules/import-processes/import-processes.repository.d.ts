@@ -6,6 +6,7 @@ declare class ImportProcessesRepository {
     constructor(importProcessModel: Model<IImportProcess>);
     create(input: CreateImportProcessInput): Promise<IImportProcessDocument>;
     findAll(unit: string): Promise<IImportProcessDocument[]>;
+    findPending(): Promise<IImportProcessDocument[]>;
     findById(id: string): Promise<IImportProcessDocument>;
     findPendingByUnit(unit: string): Promise<IImportProcessDocument>;
     update(id: string, updateQuery: UpdateQuery<IImportProcess>): Promise<IImportProcessDocument>;

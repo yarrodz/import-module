@@ -23,6 +23,7 @@
 /// <reference types="mongoose/types/virtuals" />
 /// <reference types="mongoose/types/inferschematype" />
 import { Schema } from 'mongoose';
+import { DatabaseImportTarget } from '../enums/database-import-target.enum';
 export interface IDatabaseConnection {
     username: string;
     password: string;
@@ -38,6 +39,7 @@ export declare const DatabaseConnectionSchema: Schema<IDatabaseConnection, impor
 export interface IDatabase {
     connection: IDatabaseConnection;
     idColumn: string;
+    target: DatabaseImportTarget;
     table?: string;
     customSelect?: string;
     datasetsCount?: number;

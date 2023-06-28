@@ -4,7 +4,9 @@ import ImportProcessesRepository from '../modules/import-processes/import-proces
 import ImportProcessesService from '../modules/import-processes/import-processes.service';
 import ImportsRepository from '../modules/imports/imports.repository';
 import ImportsService from '../modules/imports/imports.service';
+import TransferService from '../modules/transfer/transfer.service';
 export default function setupServices(io: IO, datasetsRepository: DatasetsRepository, importsRepository: ImportsRepository, importProcessesRepository: ImportProcessesRepository, maxAttempts: number, delayAttempt: number, limit: number): {
     importsService: ImportsService;
     importProcessesService: ImportProcessesService;
+    transferService: TransferService;
 };
