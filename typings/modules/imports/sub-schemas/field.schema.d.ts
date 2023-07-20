@@ -28,8 +28,8 @@ export interface IField {
     feature: IFeature;
     source: string;
 }
-export declare const FieldSchema: Schema<IField, import("mongoose").Model<IField, any, any, any, import("mongoose").Document<unknown, any, IField> & Omit<IField & {
+export declare const FieldSchema: Schema<IField, import("mongoose").Model<IField, any, any, any, import("mongoose").Document<unknown, any, IField> & IField & {
     _id: import("mongoose").Types.ObjectId;
-}, never>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IField, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<IField>> & Omit<import("mongoose").FlatRecord<IField> & {
+}, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IField, import("mongoose").Document<unknown, {}, IField> & IField & {
     _id: import("mongoose").Types.ObjectId;
-}, never>>;
+}>;

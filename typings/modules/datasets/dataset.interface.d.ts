@@ -2,7 +2,7 @@ import { Document, Types } from 'mongoose';
 import { IRecord } from '../records/record.interface';
 export interface IDataset {
     unit: Types.ObjectId | string;
-    records: Omit<IRecord, 'dataset'>[];
+    records: IRecord[];
     import?: Types.ObjectId | string;
     sourceDatasetId?: string;
 }

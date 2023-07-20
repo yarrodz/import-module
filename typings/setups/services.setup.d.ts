@@ -4,9 +4,13 @@ import ImportProcessesRepository from '../modules/import-processes/import-proces
 import ImportProcessesService from '../modules/import-processes/import-processes.service';
 import ImportsRepository from '../modules/imports/imports.repository';
 import ImportsService from '../modules/imports/imports.service';
-import TransferService from '../modules/transfer/transfer.service';
-export default function setupServices(io: IO, datasetsRepository: DatasetsRepository, importsRepository: ImportsRepository, importProcessesRepository: ImportProcessesRepository, maxAttempts: number, delayAttempt: number, limit: number): {
+import OAuthService from '../modules/oauth2/oauth2.service';
+import SqlTransferHelper from '../modules/sql/sql-transfer.helper';
+import ApiTransferHelper from '../modules/api/api-transfer.helper';
+export default function setupServices(io: IO, datasetsRepository: DatasetsRepository, importsRepository: ImportsRepository, importProcessesRepository: ImportProcessesRepository, maxAttempts: number, attemptDelayTime: number, oAuth2RedirectUri: string, clientUri: string): {
     importsService: ImportsService;
     importProcessesService: ImportProcessesService;
-    transferService: TransferService;
+    oAuth2Service: OAuthService;
+    sqlTransferHelper: SqlTransferHelper;
+    apiTransferHelper: ApiTransferHelper;
 };

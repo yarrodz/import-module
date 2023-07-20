@@ -31,8 +31,8 @@ declare class DatasetsRepository {
     constructor(datasetModel: Model<IDataset>, recordsRepository: RecordsRepository);
     create(dataset: IDataset): Promise<void>;
     update(id: string | Types.ObjectId, dataset: IDataset): Promise<void>;
-    findByImportAndSourceDatasetIds(importId: string | Types.ObjectId, sourceDatasetId: string): Promise<import("mongoose").Document<unknown, {}, IDataset> & Omit<IDataset & {
+    findByImportAndSourceDatasetIds(importId: string | Types.ObjectId, sourceDatasetId: string): Promise<import("mongoose").Document<unknown, {}, IDataset> & IDataset & {
         _id: Types.ObjectId;
-    }, never>>;
+    }>;
 }
 export default DatasetsRepository;

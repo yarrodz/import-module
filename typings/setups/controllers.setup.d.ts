@@ -2,7 +2,10 @@ import ImportProcessesController from '../modules/import-processes/import-proces
 import ImportProcessesService from '../modules/import-processes/import-processes.service';
 import ImportsController from '../modules/imports/imports.controller';
 import ImportsService from '../modules/imports/imports.service';
-export default function setupControllers(importsService: ImportsService, importProcessesService: ImportProcessesService): {
+import OAuth2Controller from '../modules/oauth2/oauth2.controller';
+import OAuth2Service from '../modules/oauth2/oauth2.service';
+export default function setupControllers(importsService: ImportsService, importProcessesService: ImportProcessesService, oAuth2Service: OAuth2Service): {
     importsController: ImportsController;
     importProcessesController: ImportProcessesController;
+    oAuthController: OAuth2Controller;
 };

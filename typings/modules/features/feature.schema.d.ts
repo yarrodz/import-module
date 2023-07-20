@@ -29,8 +29,8 @@ export interface IFeature {
     name: string;
     type: FeatureType;
 }
-export declare const FeatureSchema: Schema<IFeature, import("mongoose").Model<IFeature, any, any, any, import("mongoose").Document<unknown, any, IFeature> & Omit<IFeature & Required<{
+export declare const FeatureSchema: Schema<IFeature, import("mongoose").Model<IFeature, any, any, any, import("mongoose").Document<unknown, any, IFeature> & IFeature & Required<{
     _id: string | Types.ObjectId;
-}>, never>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IFeature, import("mongoose").Document<unknown, {}, import("mongoose").FlatRecord<IFeature>> & Omit<import("mongoose").FlatRecord<IFeature> & Required<{
+}>, any>, {}, {}, {}, {}, import("mongoose").DefaultSchemaOptions, IFeature, import("mongoose").Document<unknown, {}, IFeature> & IFeature & Required<{
     _id: string | Types.ObjectId;
-}>, never>>;
+}>>;
