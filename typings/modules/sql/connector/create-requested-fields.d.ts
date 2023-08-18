@@ -1,2 +1,2 @@
-import { IField } from '../../imports/sub-schemas/field.schema';
-export declare function createRequestedFields(fields: IField[], idColumn: string): string[];
+import ImportField from '../../imports/interfaces/import-field.interface';
+export declare function createRequestedFields(fields: ImportField[], idColumn: string): string[];

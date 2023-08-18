@@ -1,0 +1,1 @@
+{"version":3,"file":"transform-iFrame-instance.js","sourceRoot":"","sources":["../../../src/utils/transform-iFrame-instance/transform-iFrame-instance.ts"],"names":[],"mappings":";;AAAA,SAAwB,uBAAuB,CAAC,QAAa;IAC3D,IAAI,QAAQ,KAAK,SAAS,EAAE;QAC1B,OAAO,SAAS,CAAC;KAClB;SAAM;QACL,OAAO;YACL,EAAE,EAAE,QAAQ,CAAC,EAAE;YACf,GAAG,QAAQ,CAAC,UAAU;SACvB,CAAC;KACH;AACH,CAAC;AATD,0CASC"}

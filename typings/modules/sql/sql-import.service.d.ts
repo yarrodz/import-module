@@ -1,17 +1,15 @@
-import SqlColumnsHelper from './sql-columns.helper';
-import SqlTransferHelper from './sql-transfer.helper';
+import TransfersRepository from '../transfers/transfers.repository';
+import SqlColumnsHelper from './helpers/sql-columns.helper';
+import SqlImportHelper from './helpers/sql-import.helper';
+import SqlImport from './interfaces/sql-import.interface';
 import ResponseHandler from '../../utils/response-handler/response-handler';
-import ImportProcessesRepository from '../import-processes/import-processes.repository';
-import { IImportProcessDocument } from '../import-processes/import-process.schema';
-import { IImportDocument } from '../imports/import.schema';
 declare class SqlImportService {
     private sqlColumnsHelper;
-    private sqlTransferHelper;
-    private importProcessesRepository;
-    constructor(sqlColumnsHelper: SqlColumnsHelper, sqlTransferHelper: SqlTransferHelper, importProcessesRepository: ImportProcessesRepository);
-    connect(impt: IImportDocument): Promise<ResponseHandler>;
-    start(impt: IImportDocument): Promise<ResponseHandler>;
-    reload(impt: IImportDocument, process: IImportProcessDocument): Promise<ResponseHandler>;
-    retry(impt: IImportDocument, process: IImportProcessDocument): Promise<ResponseHandler>;
+    private sqlImportHelper;
+    private transfersRepository;
+    constructor(sqlColumnsHelper: SqlColumnsHelper, sqlImportHelper: SqlImportHelper, transefersRepository: TransfersRepository);
+    getColumns(impt: SqlImport): Promise<ResponseHandler>;
+    checkIdColumnUniqueness(impt: SqlImport): Promise<ResponseHandler>;
+    import(impt: SqlImport): Promise<ResponseHandler>;
 }
 export default SqlImportService;

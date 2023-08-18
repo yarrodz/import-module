@@ -1,11 +1,11 @@
 import { AxiosRequestConfig } from 'axios';
-import { IRequestPaginationOptions } from '../sub-schemas/api-sub-schemas/request-pagination-options.schema';
-import IOffsetPagination from '../../transfer/interfaces/offset-pagination.interface';
-import ICursorPagination from '../../transfer/interfaces/cursor-pagination.interface';
-import { TransferType } from '../../transfer/enums/transfer-type.enum';
+import { TransferMethod } from '../../transfers/enums/transfer-method.enum';
+import RequestPaginationOptions from '../interfaces/request-pagination-options.interface';
+import OffsetPagination from '../../transfers/interfaces/offset-pagination.interface';
+import CursorPagination from '../../transfers/interfaces/cursor-pagination.interface';
 declare class PaginateRequestHelper {
-    paginate(request: AxiosRequestConfig, paginationType: TransferType, paginationOptions: IRequestPaginationOptions, pagination: IOffsetPagination | ICursorPagination): void;
-    private paginateQueryParams;
-    private paginateBody;
+    static paginate(request: AxiosRequestConfig, paginationType: TransferMethod, paginationOptions?: RequestPaginationOptions, pagination?: OffsetPagination | CursorPagination): void;
+    private static paginateQueryParams;
+    private static paginateBody;
 }
 export default PaginateRequestHelper;

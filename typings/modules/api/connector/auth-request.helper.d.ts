@@ -1,10 +1,10 @@
 import { AxiosRequestConfig } from 'axios';
-import { IRequestAuth } from '../sub-schemas/api-sub-schemas/request-auth.shema';
+import ApiConnection from '../interfaces/api-connection.interface';
 declare class AuthRequestHelper {
-    auth(request: AxiosRequestConfig, auth: IRequestAuth): Promise<void>;
-    private apiKeyAuth;
-    private basicAuth;
-    private bearerAuth;
-    private oauth2;
+    static auth(request: AxiosRequestConfig, auth?: ApiConnection): Promise<void>;
+    private static apiKeyAuth;
+    private static basicAuth;
+    private static bearerAuth;
+    private static oauth2;
 }
 export default AuthRequestHelper;

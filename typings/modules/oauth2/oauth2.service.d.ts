@@ -1,11 +1,11 @@
 import { Request } from 'express';
+import ConnectionsRepository from '../connections/connections.repository';
 import ResponseHandler from '../../utils/response-handler/response-handler';
-import ImportsRepository from '../imports/imports.repository';
 declare class OAuth2Service {
-    private importsRepository;
     private oAuth2RedirectUri;
     private clientUri;
-    constructor(importsRepository: ImportsRepository, oAuth2RedirectUri: string, clientUri: string);
+    private connectionsRepository;
+    constructor(oAuth2RedirectUri: string, clientUri: string, connectionsRepository: ConnectionsRepository);
     oAuth2Callback: (req: Request) => Promise<ResponseHandler>;
     private createCallbackBody;
     private createSuccessRedirectUri;

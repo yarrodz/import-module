@@ -1,9 +1,4 @@
-import { Document, Types } from 'mongoose';
-export interface IRecord {
+export default interface Record {
     value: any;
-    archived: boolean;
-    feature: Types.ObjectId;
-    dataset: Types.ObjectId;
-}
-export interface IRecordDocument extends IRecord, Document {
+    featureId: number;
 }

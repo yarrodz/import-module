@@ -3,7 +3,7 @@ import ImportsController from './imports.controller';
 declare class ImportsRouter {
     router: Router;
     private importsController;
-    constructor(importsController: ImportsController);
+    constructor(ImportsController: ImportsController);
     private initializeRoutes;
 }
 export default ImportsRouter;
